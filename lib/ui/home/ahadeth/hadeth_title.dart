@@ -15,7 +15,7 @@ HadethTitle(this.hadeth);
         padding: const EdgeInsets.all(8.0),
         child: Text(
           hadeth.title,
-          style: TextStyle(fontWeight: FontWeight.w400, fontSize: 20),
+          style: Theme.of(context).textTheme.titleLarge,
           textAlign: TextAlign.center,
         ),
       ),

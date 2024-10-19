@@ -23,19 +23,19 @@ class HadethDetails extends StatelessWidget {
         ),
         body: Card(
             shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-            elevation: 30,
-            margin: EdgeInsets.symmetric(horizontal: 24, vertical: 64),
+               Theme.of(context).cardTheme.shape,
+            elevation: Theme.of(context).cardTheme.elevation,
+            margin: Theme.of(context).cardTheme.margin,
             child: Column(
               children: [
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(30.0),
                     child: SingleChildScrollView(
                       child: Text(
                         textAlign: TextAlign.center,
                         hadeth.content,
-                        style: TextStyle(fontWeight: FontWeight.w400, fontSize: 20),
+                        style: Theme.of(context).textTheme.titleSmall,
                       ),
                     ),
                   ),

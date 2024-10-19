@@ -8,9 +8,9 @@ class TasbehTab extends StatefulWidget {
 }
 
 class _TasbehTabState extends State<TasbehTab> {
-  int index=0;
-  double angle=0;
-  List<String> doaa=['سبحان الله','الحمد لله','الله اكبر'];
+  int index = 0;
+  double angle = 0;
+  List<String> doaa = ['سبحان الله', 'الحمد لله', 'الله اكبر'];
 
   @override
   Widget build(BuildContext context) {
@@ -46,48 +46,69 @@ class _TasbehTabState extends State<TasbehTab> {
               ),
             ),
           ],
-        ),SizedBox(height: 25,),
+        ),
+        SizedBox(
+          height: 25,
+        ),
         Text(
           'عدد التسبيحات',
-          style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
-        ),SizedBox(height: 25,),
-        Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(25),color:  Theme.of(context).colorScheme.primary,),
-          width: 69,height: 81,
-
-          child: Align(alignment: Alignment.center,
+          style:Theme.of(context).textTheme.titleMedium,
+        ),
+        SizedBox(
+          height: 25,
+        ),
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(25),
+            color: Theme.of(context).colorScheme.primary,
+          ),
+          width: 69,
+          height: 81,
+          child: Align(
+            alignment: Alignment.center,
             child: Text(
               counter.toString(),
-              style: TextStyle(color: Colors.white,fontWeight: FontWeight.w400,fontSize: 25),
+              style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 25),
             ),
           ),
-        ),SizedBox(height: 25,),
-        Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(25),color:  Theme.of(context).colorScheme.primary,),
-          width: 137,height: 51,
-
-          child: Align(alignment: Alignment.center,
+        ),
+        SizedBox(
+          height: 25,
+        ),
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(25),
+            color: Theme.of(context).colorScheme.onSecondary,
+          ),
+          width: 137,
+          height: 51,
+          child: Align(
+            alignment: Alignment.center,
             child: Text(
               doaa[index],
-              style: TextStyle(color: Colors.white,fontWeight: FontWeight.w400,fontSize: 25),
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
           ),
         ),
       ],
     );
   }
+
   int counter = 0;
   void counterIncrement() {
-    angle+=10;
-    if(counter==33){
-counter=0;
-index++;
+    angle += 10;
+    if (counter == 33) {
+      counter = 0;
+      index++;
     }
-    if(index>=doaa.length){
-      index=0;
-    }
-    else{
+    if (index >= doaa.length) {
+      index = 0;
+    } else {
       counter++;
     }
-    setState(() {
-    });
+    setState(() {});
   }
 }
