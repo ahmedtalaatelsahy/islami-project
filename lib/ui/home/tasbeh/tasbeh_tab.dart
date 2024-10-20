@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami/ui/translation.dart';
 
 class TasbehTab extends StatefulWidget {
   TasbehTab({super.key});
@@ -48,7 +49,7 @@ class _TasbehTabState extends State<TasbehTab> {
           ],
         ),SizedBox(height: 25,),
         Text(
-          'عدد التسبيحات',
+          getTranslation(context).sebhaCount,
           style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
         ),SizedBox(height: 25,),
         Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(25),color:  Theme.of(context).colorScheme.primary,),
