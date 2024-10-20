@@ -3,6 +3,9 @@ import 'package:islami/ui/home/ahadeth/hadeth_tab.dart';
 import 'package:islami/ui/home/quran/quran_tab.dart';
 import 'package:islami/ui/home/radio/radio_tab.dart';
 import 'package:islami/ui/home/tasbeh/tasbeh_tab.dart';
+import 'package:islami/ui/translation.dart';
+
+
 
 
 class HomeScreen extends StatefulWidget {
@@ -40,10 +43,10 @@ int selectedIndex=0;
           });
         },
             items:[
-          BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/images/moshaf_blue.png")),label: "quran",backgroundColor: Theme.of(context).colorScheme.primary),
-          BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/images/sebha.png')),label: "sebha",backgroundColor: Theme.of(context).colorScheme.primary),
-          BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/images/quran-quran-svgrepo-com.png')),label: "ahadeth",backgroundColor: Theme.of(context).colorScheme.primary),
-          BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/images/radio.png')),label: "radio",backgroundColor: Theme.of(context).colorScheme.primary),
+          BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/images/moshaf_blue.png")),label: getTranslation(context).quranTab,backgroundColor: Theme.of(context).colorScheme.primary),
+          BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/images/sebha.png')),label: getTranslation(context).sebhaTab,backgroundColor: Theme.of(context).colorScheme.primary),
+          BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/images/quran-quran-svgrepo-com.png')),label: getTranslation(context).ahdethTab,backgroundColor: Theme.of(context).colorScheme.primary),
+          BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/images/radio.png')),label:getTranslation(context).radioTab,backgroundColor: Theme.of(context).colorScheme.primary),
 
         ] ),
         body:tabs[selectedIndex]

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami/ui/home/quran/chapter_title.dart';
+import 'package:islami/ui/translation.dart';
 
 class QuranTab extends StatelessWidget {
   List<String> chapters=["الفاتحه","البقرة","آل عمران","النساء","المائدة","الأنعام","الأعراف","الأنفال","التوبة","يونس","هود"
@@ -25,7 +26,7 @@ class QuranTab extends StatelessWidget {
         Row(mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Column(
-              children: [Text('Chapter Name',style: Theme.of(context).textTheme.titleMedium,)],
+              children: [Text(getTranslation(context).chapterTitle,style: Theme.of(context).textTheme.titleMedium,)],
             )
 
           ],
