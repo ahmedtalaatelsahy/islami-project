@@ -26,7 +26,7 @@ class QuranTab extends StatelessWidget {
         Row(mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Column(
-              children: [Text(getTranslation(context).chapterTitle,style: TextStyle(fontSize: 25,fontWeight: FontWeight.w600),)],
+              children: [Text(getTranslation(context).chapterTitle,style: Theme.of(context).textTheme.titleMedium,)],
             )
 
           ],

@@ -32,7 +32,7 @@ int selectedIndex=0;
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           title: Text(
-            'Islamy',
+            'Islamy',style: Theme.of(context).textTheme.titleMedium,
           ),
 
         ),

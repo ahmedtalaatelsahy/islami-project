@@ -12,7 +12,7 @@ class ChapterTitle extends StatelessWidget {
     },
       child: Text(
         title,
-        style: TextStyle(fontWeight: FontWeight.w400, fontSize: 20),
+        style: Theme.of(context).textTheme.titleLarge,
         textAlign: TextAlign.center,
       ),
     );

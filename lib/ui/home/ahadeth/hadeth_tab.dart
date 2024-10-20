@@ -39,7 +39,7 @@ class _HadethTabState extends State<HadethTab> {
           children: [
             Text(
               getTranslation(context).ahadeth,
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+              style: Theme.of(context).textTheme.titleMedium,
             )
           ],
         ),
