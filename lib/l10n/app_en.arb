@@ -7,5 +7,9 @@
   "radioTab": "radio",
   "ahadeth": "Ahadeth",
   "sebhaCount": "Sebha Count",
-  "settingsTab": "settings"
+  "settingsTab": "settings",
+  "language":"Language",
+  "theme":"Theme",
+  "light":"Light",
+  "dark":"Dark"
 }

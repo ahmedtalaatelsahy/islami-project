@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:islami/ui/home/ahadeth/hadeth_tab.dart';
 import 'package:islami/ui/home/quran/quran_tab.dart';
 import 'package:islami/ui/home/radio/radio_tab.dart';
-import 'package:islami/ui/home/settings/settins_tab.dart';
+import 'package:islami/ui/home/settings/settings_tab.dart';
 import 'package:islami/ui/home/tasbeh/tasbeh_tab.dart';
+import 'package:islami/ui/providers/theme_provider.dart';
 import 'package:islami/ui/translation.dart';
+import 'package:provider/provider.dart';
 
 
 
@@ -17,15 +19,19 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  List<Widget> tabs=[QuranTab(),TasbehTab(),HadethTab(),RadioTab(),SettinsTab()];
+  List<Widget> tabs=[QuranTab(),TasbehTab(),HadethTab(),RadioTab(),SettingsTab()];
 int selectedIndex=0;
 
   @override
   Widget build(BuildContext context) {
+    ThemeProvider themeProvider=Provider.of<ThemeProvider>(context);
+    bool isDark=themeProvider.isDarkEnabled();
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage(
+              image: isDark?AssetImage(
+                'assets/images/dark bg.png',
+              ):AssetImage(
                 'assets/images/homeScreen.png',
               ),
               fit: BoxFit.fill)),
@@ -54,4 +60,5 @@ int selectedIndex=0;
       ),
     );
   }
+
 }

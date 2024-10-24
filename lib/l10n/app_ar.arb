@@ -7,5 +7,9 @@
   "radioTab": "الاذاعة",
   "ahadeth": "الاحاديث",
   "sebhaCount":"عدد التسبيحات",
-  "settingsTab":"الاعدادات"
+  "settingsTab":"الاعدادات",
+  "language":"اللغة",
+  "theme":"المظهر",
+  "light":"نهاري",
+  "dark":"ليلي"
 }

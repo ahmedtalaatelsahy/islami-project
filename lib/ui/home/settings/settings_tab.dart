@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:islami/ui/home/settings/theme_bottom_sheet.dart';
+import 'package:islami/ui/providers/language_provider.dart';
+import 'package:islami/ui/providers/theme_provider.dart';
+import 'package:islami/ui/translation.dart';
+import 'package:provider/provider.dart';
 
 import 'language_bottom_sheet.dart';
 
-class SettinsTab extends StatelessWidget {
-  const SettinsTab({super.key});
+class SettingsTab extends StatelessWidget {
+  const SettingsTab({super.key});
 
   @override
   Widget build(BuildContext context) {
+    LocaleProvider localeProvider=Provider.of<LocaleProvider>(context);
+    ThemeProvider themeProvider=Provider.of(context);
     return Column(
       children: [
         SizedBox(
@@ -18,7 +24,7 @@ class SettinsTab extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 13),
               child: Text(
-                'Theme',
+                getTranslation(context).theme,
                 style: TextStyle(fontSize: 20, color: Colors.black),
               ),
             ),
@@ -33,13 +39,13 @@ class SettinsTab extends StatelessWidget {
               padding: EdgeInsets.all(10),
               width: double.infinity,
               child: Text(
-                'light',
+                themeProvider.getCurrentTheme(context),
                 style: TextStyle(
                     fontSize: 20, color: Theme.of(context).colorScheme.primary),
               ),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
-                  color: Colors.transparent,
+                  color: Colors.white,
                   border:
                       Border.all(color: Theme.of(context).colorScheme.primary,width: 2)),
             ),
@@ -53,7 +59,7 @@ class SettinsTab extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 13),
               child: Text(
-                'Language',
+                getTranslation(context).language,
                 style: TextStyle(fontSize: 20, color: Colors.black),
               ),
             ),
@@ -68,13 +74,13 @@ class SettinsTab extends StatelessWidget {
               padding: EdgeInsets.all(10),
               width: double.infinity,
               child: Text(
-                'English',
+                localeProvider.getCurrentLocalText(),
                 style: TextStyle(
                     fontSize: 20, color: Theme.of(context).colorScheme.primary),
               ),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
-                  color: Colors.transparent,
+                  color: Colors.white,
                   border:
                       Border.all(color: Theme.of(context).colorScheme.primary,width: 2) ),
             ),
