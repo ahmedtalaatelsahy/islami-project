@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         SuraDetails.routName: (_) => SuraDetails(),
         HadethDetails.routName: (_) => HadethDetails(),
       },
-      initialRoute: HomeScreen.routName,
+      initialRoute: SplashScreen.routName,
       theme: MyTheme.lightTheme,
       darkTheme: MyTheme.darkTheme,
       themeMode: themeProvider.currentTheme,
