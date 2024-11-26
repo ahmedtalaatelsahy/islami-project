@@ -14,6 +14,8 @@ import 'package:provider/provider.dart';
 class HomeScreen extends StatefulWidget {
   static const String routName = 'homeScreen';
 
+  const HomeScreen({super.key});
+
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }

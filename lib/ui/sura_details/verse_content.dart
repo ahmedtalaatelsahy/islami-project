@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class verse_content extends StatelessWidget {
   int index;
   String content;
-  verse_content(this.content,this.index);
+  verse_content(this.content,this.index, {super.key});
   @override
   Widget build(BuildContext context) {
     return InkWell(onTap: () {

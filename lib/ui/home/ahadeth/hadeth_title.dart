@@ -5,7 +5,7 @@ import 'package:islami/ui/home/ahadeth/hadeth_tab.dart';
 
 class HadethTitle extends StatelessWidget {
 Hadeth hadeth;
-HadethTitle(this.hadeth);
+HadethTitle(this.hadeth, {super.key});
   @override
   Widget build(BuildContext context) {
     return InkWell(onTap: () {

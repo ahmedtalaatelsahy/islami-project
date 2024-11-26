@@ -6,7 +6,7 @@ import 'package:islami/ui/translation.dart';
 
 
 class HadethTab extends StatefulWidget {
-  HadethTab({super.key});
+  const HadethTab({super.key});
 
   @override
   State<HadethTab> createState() => _HadethTabState();

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami/ui/translation.dart';
 
 class TasbehTab extends StatefulWidget {
-  TasbehTab({super.key});
+  const TasbehTab({super.key});
 
   @override
   State<TasbehTab> createState() => _TasbehTabState();
@@ -33,6 +33,7 @@ class _TasbehTabState extends State<TasbehTab> {
             Padding(
               padding: const EdgeInsets.only(top: 75.0),
               child: Align(
+                alignment: Alignment.center,
                 child: InkWell(
                     onTap: () {
                       counterIncrement();
@@ -43,7 +44,6 @@ class _TasbehTabState extends State<TasbehTab> {
                         'assets/images/body of seb7a.png',
                       ),
                     )),
-                alignment: Alignment.center,
               ),
             ),
           ],

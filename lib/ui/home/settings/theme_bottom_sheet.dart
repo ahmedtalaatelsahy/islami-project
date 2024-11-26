@@ -68,7 +68,7 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
     return Row(
       children: [
         Text(
-          getTranslation(context).dark,
+          text,
           style: Theme.of(context).textTheme.titleSmall,
         ),
       ],

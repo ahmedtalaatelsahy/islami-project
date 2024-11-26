@@ -5,6 +5,7 @@ import 'package:islami/ui/providers/theme_provider.dart';
 import 'package:islami/ui/translation.dart';
 import 'package:provider/provider.dart';
 
+import '../../style/theme.dart';
 import 'language_bottom_sheet.dart';
 
 class SettingsTab extends StatelessWidget {
@@ -13,7 +14,7 @@ class SettingsTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     LocaleProvider localeProvider=Provider.of<LocaleProvider>(context);
-    ThemeProvider themeProvider=Provider.of(context);
+    ThemeProvider themeProvider=Provider.of<ThemeProvider>(context);
     return Column(
       children: [
         SizedBox(
@@ -25,7 +26,7 @@ class SettingsTab extends StatelessWidget {
               padding: const EdgeInsets.only(left: 13),
               child: Text(
                 getTranslation(context).theme,
-                style: TextStyle(fontSize: 20, color: Colors.black),
+                style: TextStyle(fontSize: 20, color:themeProvider.isDarkEnabled()?MyTheme.darkSecondary: Colors.black),
               ),
             ),
           ],
@@ -38,16 +39,16 @@ class SettingsTab extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.all(10),
               width: double.infinity,
-              child: Text(
-                themeProvider.getCurrentTheme(context),
-                style: TextStyle(
-                    fontSize: 20, color: Theme.of(context).colorScheme.primary),
-              ),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
                   color: Colors.white,
                   border:
                       Border.all(color: Theme.of(context).colorScheme.primary,width: 2)),
+              child: Text(
+                themeProvider.getCurrentTheme(context),
+                style: TextStyle(
+                    fontSize: 20, color: Theme.of(context).colorScheme.primary),
+              ),
             ),
           ),
         ),
@@ -60,7 +61,7 @@ class SettingsTab extends StatelessWidget {
               padding: const EdgeInsets.only(left: 13),
               child: Text(
                 getTranslation(context).language,
-                style: TextStyle(fontSize: 20, color: Colors.black),
+                style: TextStyle(fontSize: 20, color:themeProvider.isDarkEnabled()?MyTheme.darkSecondary: Colors.black),
               ),
             ),
           ],
@@ -73,16 +74,16 @@ class SettingsTab extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.all(10),
               width: double.infinity,
-              child: Text(
-                localeProvider.getCurrentLocalText(),
-                style: TextStyle(
-                    fontSize: 20, color: Theme.of(context).colorScheme.primary),
-              ),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
                   color: Colors.white,
                   border:
                       Border.all(color: Theme.of(context).colorScheme.primary,width: 2) ),
+              child: Text(
+                localeProvider.getCurrentLocalText(),
+                style: TextStyle(
+                    fontSize: 20, color: Theme.of(context).colorScheme.primary),
+              ),
             ),
           ),
         )

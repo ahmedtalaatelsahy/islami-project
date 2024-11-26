@@ -6,16 +6,19 @@ import 'package:islami/ui/providers/theme_provider.dart';
 import 'package:islami/ui/splash/splash_screen.dart';
 import 'package:islami/ui/style/theme.dart';
 import 'package:islami/ui/sura_details/sura_details.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main()  {
+
   runApp(MultiProvider(providers: [
-    ChangeNotifierProvider(create: (context) => ThemeProvider(),),
-    ChangeNotifierProvider(create: (context) => LocaleProvider(),)
-  ],
-      child: const MyApp()));
+    ChangeNotifierProvider(
+      create: (_) => ThemeProvider(),
+    ),
+    ChangeNotifierProvider(
+      create: (_) => LocaleProvider(),
+    )
+  ], child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -24,7 +27,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ThemeProvider themeProvider = Provider.of<ThemeProvider>(context);
-    LocaleProvider localeProvider=Provider.of<LocaleProvider>(context);
+    LocaleProvider localeProvider = Provider.of<LocaleProvider>(context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
