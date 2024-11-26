@@ -4,7 +4,6 @@ import 'package:islami/ui/home/ahadeth/hadeth_title.dart';
 import 'package:islami/ui/style/theme.dart';
 import 'package:islami/ui/translation.dart';
 
-
 class HadethTab extends StatefulWidget {
   HadethTab({super.key});
 
@@ -14,11 +13,12 @@ class HadethTab extends StatefulWidget {
 
 class _HadethTabState extends State<HadethTab> {
   List<Hadeth> allHadeth = [];
-@override
+  @override
   void initState() {
     super.initState();
     readHdethFile();
   }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -74,9 +74,7 @@ class _HadethTabState extends State<HadethTab> {
       Hadeth h = Hadeth(title, content);
       allHadeth.add(h);
     }
-    setState(() {
-
-    });
+    setState(() {});
   }
 }
 
