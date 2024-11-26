@@ -7,7 +7,7 @@ import 'package:islami/ui/sura_details/verse_content.dart';
 class SuraDetails extends StatefulWidget {
   static const routName = 'suraDetails';
 
-  SuraDetails({super.key});
+  const SuraDetails({super.key});
 
   @override
   State<SuraDetails> createState() => _SuraDetailsState();

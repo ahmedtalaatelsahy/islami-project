@@ -1,0 +1,16 @@
+{
+  "appTitle": "Islami",
+  "chapterTitle": "Chapter Name",
+  "quranTab": "quran",
+  "sebhaTab": "sebha",
+  "ahdethTab": "ahadeth",
+  "radioTab": "radio",
+  "ahadeth": "Ahadeth",
+  "sebhaCount": "Sebha Count",
+  "settingsTab": "settings",
+  "language":"Language",
+  "theme":"Theme",
+  "light":"Light",
+  "dark":"Dark",
+  "quranKarem": "quran karem radio"
+}

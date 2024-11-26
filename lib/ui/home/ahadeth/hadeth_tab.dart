@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami/ui/home/ahadeth/hadeth_title.dart';
 import 'package:islami/ui/style/theme.dart';
+import 'package:islami/ui/translation.dart';
 
 
 class HadethTab extends StatefulWidget {
-  HadethTab({super.key});
+  const HadethTab({super.key});
 
   @override
   State<HadethTab> createState() => _HadethTabState();
@@ -37,8 +38,8 @@ class _HadethTabState extends State<HadethTab> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Ahadeth',
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+              getTranslation(context).ahadeth,
+              style: Theme.of(context).textTheme.titleMedium,
             )
           ],
         ),

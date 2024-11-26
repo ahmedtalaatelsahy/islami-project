@@ -1,0 +1,16 @@
+{
+  "appTitle": "اسلامي",
+  "chapterTitle": "اسم السورة",
+  "quranTab": "قرآن",
+  "sebhaTab": "سبحة",
+  "ahdethTab": "احاديث",
+  "radioTab": "الاذاعة",
+  "ahadeth": "الاحاديث",
+  "sebhaCount":"عدد التسبيحات",
+  "settingsTab":"الاعدادات",
+  "language":"اللغة",
+  "theme":"المظهر",
+  "light":"نهاري",
+  "dark":"ليلي",
+  "quranKarem": "إذاعة القرآن الكريم"
+}

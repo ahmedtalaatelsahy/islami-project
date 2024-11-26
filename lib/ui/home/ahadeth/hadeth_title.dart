@@ -5,7 +5,7 @@ import 'package:islami/ui/home/ahadeth/hadeth_tab.dart';
 
 class HadethTitle extends StatelessWidget {
 Hadeth hadeth;
-HadethTitle(this.hadeth);
+HadethTitle(this.hadeth, {super.key});
   @override
   Widget build(BuildContext context) {
     return InkWell(onTap: () {
@@ -15,7 +15,7 @@ HadethTitle(this.hadeth);
         padding: const EdgeInsets.all(8.0),
         child: Text(
           hadeth.title,
-          style: TextStyle(fontWeight: FontWeight.w400, fontSize: 20),
+          style: Theme.of(context).textTheme.titleLarge,
           textAlign: TextAlign.center,
         ),
       ),
